@@ -1,24 +1,40 @@
+import { createBrowserRouter } from "react-router-dom";
+import Main from "../Layout/Main";
+import Courses from "../pages/courses/Courses";
+import Home from "../pages/Home/Home";
+import Login from "../pages/Login-details/Login/Login";
+import Register from "../pages/Login-details/Register/Register";
+import Blog from "../pages/other/Blog";
+import ErrorPage from "../pages/other/ErrorPage";
+import Faq from "../pages/other/Faq";
+import Course from "../pages/Shared/Course";
+import PrivateRoute from "./PrivateRoute";
 
 
 export const routes = createBrowserRouter([
     {
         path: '/',
         element: <Main></Main>,
+        errorElement: <ErrorPage></ErrorPage>,
         children: [
             {
                 path: '/',
                 element: <Home></Home>,
-                loader: () => fetch('')
             },
             {
-                path: '/category/:id',
-                element: <Category></Category>,
-                loader: ({ params }) => fetch(`http://localhost:5000/category/${params.id}`)
+                path: '/courses',
+                element: <Courses></Courses>,
+                loader: () => fetch(`http://localhost:5000/courses`)
+            },
+            {
+                path: '/courses/:id',
+                element: <Course></Course>,
+                loader: () => fetch(`http://localhost:5000/courses`)
             },
             {
                 path: '/news/:id',
-                element: <PrivateRoute><News></News></PrivateRoute>,
-                loader: ({ params }) => fetch(`http://localhost:5000/news/${params.id}`)
+                element: <PrivateRoute><Course></Course></PrivateRoute>,
+                loader: ({ params }) => fetch(`http://localhost:5000/course/${params.id}`)
             },
             {
                 path: '/login',
@@ -26,15 +42,15 @@ export const routes = createBrowserRouter([
             },
             {
                 path: '/register',
-                element: <Register />
+                element: <Register></Register>
             },
             {
-                path: '/terms',
-                element: <TermsAndCondition></TermsAndCondition>
+                path: '/faq',
+                element: <Faq></Faq>
             },
             {
-                path: '/profile',
-                element: <PrivateRoute><Profile></Profile></PrivateRoute>
+                path: '/blog',
+                element: <Blog></Blog>
             }
         ]
     }
