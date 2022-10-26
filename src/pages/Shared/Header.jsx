@@ -7,6 +7,7 @@ import { Link } from 'react-router-dom';
 import Button from 'react-bootstrap/Button';
 import { AuthContext } from '../../Context/AuthProvider';
 import img from "../../asset/Coursera-BD.png";
+import BootstrapSwitchButton from 'bootstrap-switch-button-react'
 
 const Header = () => {
     const { user, logOut } = useContext(AuthContext)
@@ -19,12 +20,12 @@ const Header = () => {
     }
 
     return (
-        <Navbar collapseOnSelect className='mb-4 ' expand="lg" bg="light" variant="light">
+        <Navbar collapseOnSelect className='' expand="lg" bg="light" variant="light">
             <div className='container d-flex justify-content-between'>
                 <Navbar.Brand> <Link className='text-decoration-none  fs-4  border-2 border-bottom border-primary' to='/'> <Image className='mb-2' src={img} style={{ height: '30px', width: '30px' }}></Image>  COURSERA-BD</Link> </Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
-                    <Nav className="me-3" >
+                    <Nav className="me-3 ms-auto" >
                         <Link className='text-decoration-none me-3' style={{ color: '#666' }} to='/courses'> Courses </Link>
                         <Link className='text-decoration-none me-3' style={{ color: '#666' }} to='/faq'>Faq</Link>
                         <Link className='text-decoration-none me-3' style={{ color: '#666' }} to='/blog'>Blog</Link>
@@ -54,7 +55,11 @@ const Header = () => {
                                 : <FaUser style={{ color: '#666' }}  ></FaUser>
                             }
                         </Link>
+
                     </Nav>
+                    <span className='ms-4 d-lg-flex align-items-center border  border-dark rounded'>
+                        <BootstrapSwitchButton checked={true} width={100} onstyle="dark" onlabel='Dark Mode' offlabel='Light Mode' />
+                    </span>
                 </Navbar.Collapse>
             </div>
         </Navbar >

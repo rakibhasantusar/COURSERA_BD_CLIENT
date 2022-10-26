@@ -1,9 +1,10 @@
 import React from 'react';
 
-const LeftSideNav = () => {
+const LeftSideNav = ({ course }) => {
+    const { title } = course;
     return (
         <div>
-
+            <p> {title}</p>
         </div>
     );
 };
