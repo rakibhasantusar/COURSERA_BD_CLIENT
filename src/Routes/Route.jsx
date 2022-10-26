@@ -8,6 +8,7 @@ import Blog from "../pages/other/Blog";
 import ErrorPage from "../pages/other/ErrorPage";
 import Faq from "../pages/other/Faq";
 import Course from "../pages/Shared/Course";
+import CourseDetail from "../pages/Shared/CourseDetail";
 import PrivateRoute from "./PrivateRoute";
 
 
@@ -27,9 +28,13 @@ export const routes = createBrowserRouter([
                 loader: () => fetch(`http://localhost:5000/courses`)
             },
             {
-                path: '/courses/:id',
+                path: '/course/',
                 element: <Course></Course>,
-                loader: () => fetch(`http://localhost:5000/courses`)
+            },
+            {
+                path: '/coursesdetail/:id',
+                element: <CourseDetail></CourseDetail>,
+                loader: ({ params }) => fetch(`http://localhost:5000/courses/${params.id}`)
             },
             {
                 path: '/news/:id',

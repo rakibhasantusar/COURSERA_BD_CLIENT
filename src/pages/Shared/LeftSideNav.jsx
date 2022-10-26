@@ -1,10 +1,13 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const LeftSideNav = ({ course }) => {
-    const { title } = course;
+    const { title, id } = course;
     return (
         <div>
-            <p> {title}</p>
+            <Link to={`/coursesdetail/${id}`}>
+                <p> {title}</p>
+            </Link>
         </div>
     );
 };

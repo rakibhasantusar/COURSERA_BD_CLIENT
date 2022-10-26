@@ -1,22 +1,29 @@
 import React from 'react';
-import { Col, Row } from 'react-bootstrap';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
+import { FaStar } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 const Course = ({ course }) => {
-    const { image, title, description, price } = course
+    const { id, image, title, description, price, rating } = course
     return (
         <div className='my-3'>
-            <Card style={{ width: '18rem' }}>
+            <Card style={{ width: '18rem', height: '25rem' }}>
                 <Card.Img variant="top" className='img-fluid' src={image} style={{ height: '10rem' }} />
                 <Card.Body>
                     <Card.Title>{title}</Card.Title>
                     <Card.Text>
-                        Some quick example text to build on the card title and make up the
-                        bulk of the card's content.
+                        <span className=''>{description.slice(0, 70)}...</span>
                     </Card.Text>
-                    <p>price:{price}$</p>
-                    <Button variant="primary">Go somewhere</Button>
+                    <Card.Text className='position-absolute fixed-bottom ms-3' style={{ marginBottom: '60px' }}>
+                        <div className='d-flex justify-content-between'>
+                            <p className='fw-semibold'> Price: {price}$</p>
+                            <p style={{ color: '#666' }} className='me-4 d-flex align-items-center' > Ratinng: {rating.rate}<FaStar /></p>
+                        </div>
+                    </Card.Text>
+                    <Link to={`/coursesdetail/${id}`}>
+                        <Button variant="primary" className='position-absolute bottom-0 mb-4'>Course detail</Button>
+                    </Link>
                 </Card.Body>
             </Card>
         </div>
