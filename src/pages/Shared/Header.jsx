@@ -26,39 +26,46 @@ const Header = () => {
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="me-3 ms-auto" >
-                        <Link className='text-decoration-none me-3' style={{ color: '#666' }} to='/courses'> Courses </Link>
-                        <Link className='text-decoration-none me-3' style={{ color: '#666' }} to='/faq'>Faq</Link>
-                        <Link className='text-decoration-none me-3' style={{ color: '#666' }} to='/blog'>Blog</Link>
+                        <Link className='text-decoration-none me-3 fw-semibold' style={{ color: '#666' }} to='/courses'> Courses </Link>
+                        <Link className='text-decoration-none me-3 fw-semibold' style={{ color: '#666' }} to='/faq'>Faq</Link>
+                        <Link className='text-decoration-none me-3 fw-semibold' style={{ color: '#666' }} to='/blog'>Blog</Link>
                     </Nav>
                     <Nav className="">
                         <>
                             {
                                 user?.uid ?
                                     <>
-                                        <span>{user?.displayName}</span>
-                                        <Button variant='light' style={{ color: '#666' }} onClick={handleLogOut}>logout</Button>
+                                        <span className='me-2 text-primary fw-semibold d-flex align-items-center'>{user?.displayName}</span>
+                                        <Button variant='dark' style={{ color: '#fff' }} onClick={handleLogOut}>logout</Button>
                                     </>
                                     :
                                     <>
-                                        <Link className='text-decoration-none me-3' style={{ color: '#666' }} to='/login'>Login</Link>
-                                        <Link className='text-decoration-none' style={{ color: '#666' }} to='/register'>Register</Link>
+                                        <Link className='fw-semibold text-decoration-none me-3' style={{ color: '#666' }} to='/login'>Login</Link>
+                                        <Link className='fw-semibold text-decoration-none' style={{ color: '#666' }} to='/register'>Register</Link>
                                     </>
                             }
                         </>
-                        <Link className='ms-2'>
+                        <Link className='ms-2' >
                             {user?.photoURL ?
                                 <Image
+                                    data-bs-toggle="tooltip"
+                                    data-bs-placement="bottom"
+                                    title={user?.displayName}
                                     roundedCircle
                                     src={user?.photoURL}
                                     style={{ height: '40px', width: '40px' }}
                                 ></Image>
-                                : <FaUser style={{ color: '#666' }}  ></FaUser>
+                                : <FaUser style={{ color: '#666' }}
+                                    data-bs-toggle="tooltip"
+                                    data-bs-placement="bottom"
+                                    title="no information"
+                                ></FaUser>
                             }
                         </Link>
 
                     </Nav>
                     <span className='ms-4 d-lg-flex align-items-center border  border-dark rounded'>
-                        <BootstrapSwitchButton checked={true} width={70} onstyle="dark" onlabel='Dark Mode' offlabel='Light Mode' />
+                        <BootstrapSwitchButton checked={true} width={70} onstyle="dark" onlabel='Dark' offlabel='Light' />
                     </span>
                 </Navbar.Collapse>
             </div>

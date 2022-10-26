@@ -26,8 +26,8 @@ const Register = () => {
                 setError('')
                 form.reset()
                 handleUpdateUserProfile(name, photourl)
-                handleEmailVerification();
-                toast.success('verifyEmail send')
+                // handleEmailVerification();
+                // toast.success('verifyEmail send')
             })
             .catch(err => {
                 console.log(err)
@@ -49,13 +49,13 @@ const Register = () => {
         setAccepted(e.target.checked)
     }
 
-    const handleEmailVerification = () => {
-        verifyEmail()
-            .then(() => { })
-            .catch(err => {
-                console.log(err)
-            })
-    }
+    // const handleEmailVerification = () => {
+    //     verifyEmail()
+    //         .then(() => { })
+    //         .catch(err => {
+    //             console.log(err)
+    //         })
+    // }
 
     return (
         <Form className='w-50 m-auto' onSubmit={handleSubmit}>
@@ -91,7 +91,7 @@ const Register = () => {
                 Register
             </Button>
             <Form.Text className="text-danger">
-                {error}
+                <p>{error}</p>
             </Form.Text>
         </Form>
     );
