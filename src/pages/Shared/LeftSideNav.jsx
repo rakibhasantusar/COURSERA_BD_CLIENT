@@ -5,8 +5,8 @@ const LeftSideNav = ({ course }) => {
     const { title, id } = course;
     return (
         <div>
-            <Link to={`/coursesdetail/${id}`}>
-                <p> {title}</p>
+            <Link className='text-decoration-none' to={`/coursesdetail/${id}`}>
+                <p className='mx-3 fs-5 text-danger fw-semibold border border-white border-1 '> {title}</p>
             </Link>
         </div>
     );
