@@ -20,7 +20,7 @@ const Header = () => {
     }
 
     return (
-        <Navbar collapseOnSelect className='' expand="lg" bg="light" variant="light">
+        <Navbar collapseOnSelect className='shadow-sm' expand="lg" bg="light" variant="light">
             <div className='container d-flex justify-content-between'>
                 <Navbar.Brand> <Link className='text-decoration-none  fs-4  border-2 border-bottom border-primary' to='/'> <Image className='mb-2' src={img} style={{ height: '30px', width: '30px' }}></Image>  COURSERA-BD</Link> </Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
@@ -58,7 +58,7 @@ const Header = () => {
 
                     </Nav>
                     <span className='ms-4 d-lg-flex align-items-center border  border-dark rounded'>
-                        <BootstrapSwitchButton checked={true} width={100} onstyle="dark" onlabel='Dark Mode' offlabel='Light Mode' />
+                        <BootstrapSwitchButton checked={true} width={70} onstyle="dark" onlabel='Dark Mode' offlabel='Light Mode' />
                     </span>
                 </Navbar.Collapse>
             </div>

@@ -18,7 +18,7 @@ const Course = ({ course }) => {
                     <Card.Text className='position-absolute fixed-bottom ms-3' style={{ marginBottom: '60px' }}>
                         <div className='d-flex justify-content-between'>
                             <p className='fw-semibold'> Price: {price}$</p>
-                            <p style={{ color: '#666' }} className='me-4 d-flex align-items-center' > Ratinng: {rating.rate}<FaStar /></p>
+                            <p style={{ color: 'goldenrod' }} className='me-4 d-flex align-items-center' > Ratinng: {rating.rate}<FaStar /></p>
                         </div>
                     </Card.Text>
                     <Link to={`/coursesdetail/${id}`}>
