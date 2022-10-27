@@ -16,8 +16,8 @@ const Home = () => {
                             alt="First slide"
                         />
                         <Carousel.Caption>
-                            <h3>First slide label</h3>
-                            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                            <h3>Coursera BD</h3>
+                            <p>World most Popular programming learning site</p>
                         </Carousel.Caption>
                     </Carousel.Item>
                     <Carousel.Item style={{ height: 800 }}>
@@ -27,8 +27,8 @@ const Home = () => {
                             alt="First slide"
                         />
                         <Carousel.Caption>
-                            <h3>First slide label</h3>
-                            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                            <h3>Coursera BD</h3>
+                            <p>Code can change the web world</p>
                         </Carousel.Caption>
                     </Carousel.Item>
                     <Carousel.Item style={{ height: 800 }}>
@@ -38,8 +38,8 @@ const Home = () => {
                             alt="First slide"
                         />
                         <Carousel.Caption>
-                            <h3>First slide label</h3>
-                            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                            <h3>Coursera BD</h3>
+                            <p>Practice Practice & Practice </p>
                         </Carousel.Caption>
                     </Carousel.Item>
                 </Carousel>

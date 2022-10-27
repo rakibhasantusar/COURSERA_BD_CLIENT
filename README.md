@@ -1,70 +1,31 @@
-# Getting Started with Create React App
+# Project Name: coursera-bd Learning website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A Programming language learning platform for preparation next interview.During your e-learning course, it is a good idea to stop and review what was learned. Repetition is an important element of learning, and one way to repeat content is through Practice.
 
-## Available Scripts
+## •Live Link
 
-In the project directory, you can run:
+Hosted in Firebase -> [coursera-bd_website_link](https://coursera-bd.web.app/)
 
-### `npm start`
+## `features & Description below:`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+🤍 This website made with JavaScript library React v-18.2.0 & CSS React Bootstrap FrameWork
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+• In this project firstly I use React Router v-(6.4.2) which is make our website faster
 
-### `npm test`
+- I use Firebase as my website deployer
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+3.  Also i use React icon, SVG image etc
+4.  I use Component from many website
+5.  This website is fully responsive
+6.  In this website I made my own server and API
+7.  This website is helpfull for web developer
 
-### `npm run build`
+■ Of course, we want to know whether people learned something, and most of you will want to track and report that people learned something. So at the end of the e-learning course, you can present a standard quiz using multiple choice and true/false questions. At this point, grading the quiz is appropriate and learners should be told that the final quiz will be graded.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Resources & Credits
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+For Routing Components ->
+[React Router](https://reactrouter.com/en/main)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+For Hosting Server ->
+[Vercel ](https://vercel.com/)

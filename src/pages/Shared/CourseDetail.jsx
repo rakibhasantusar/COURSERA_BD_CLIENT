@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Container } from 'react-bootstrap';
+import { Button, } from 'react-bootstrap';
 import { FaStar } from 'react-icons/fa';
 import { Link, useLoaderData } from 'react-router-dom';
 import List from './List';
@@ -9,7 +9,7 @@ const ref = React.createRef();
 
 const CourseDetail = () => {
     const coursesDetail = useLoaderData()
-    const { id, description, title, details, price, rating, image, list } = coursesDetail
+    const { id, title, details, price, rating, image, list } = coursesDetail
     console.log(coursesDetail,)
     return (
         <div className='container' ref={ref}>
