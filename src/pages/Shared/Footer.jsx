@@ -1,5 +1,5 @@
 import React from 'react';
-import { CDBFooter, CDBBtn, CDBIcon, CDBContainer, CDBBox } from 'cdbreact';
+import { CDBFooter, CDBBtn, CDBIcon, CDBBox } from 'cdbreact';
 import { Link } from 'react-router-dom';
 import logo from "../../asset/Coursera-BD.png";
 
@@ -7,13 +7,13 @@ const Footer = () => {
     return (
         <CDBFooter className="shadow mt-5">
             <CDBBox display="flex" flex="column" className="mx-auto py-5" style={{ width: '90%' }}>
-                <CDBBox display="flex" justifyContent="between" className="flex-wrap">
+                <CDBBox display="flex" justifyContent="around" className="flex-wrap">
                     <CDBBox alignSelf="center" className=" mb-3">
                         <Link to="/" className="d-flex align-items-center p-0 text-dark">
                             <img alt="logo" src={logo} width="30px" />
                             <span className="ms-2 h5 font-weight-bold ">COURSERA-BD</span>
                         </Link>
-                        <CDBBox className="mt-5" display="flex">
+                        <CDBBox className="mt-5 " display="flex">
                             <CDBBtn flat color="dark" className="p-2">
                                 <CDBIcon fab icon="facebook-f" />
                             </CDBBtn>
@@ -25,7 +25,7 @@ const Footer = () => {
                             </CDBBtn>
                         </CDBBox>
                     </CDBBox>
-                    <CDBBox className=" mb-3"  >
+                    <CDBBox className=" mb-3 d-none d-lg-block"  >
                         <p className="h5 mb-3" style={{ fontWeight: '600' }}>
                             Coursera-Bd
                         </p>
@@ -35,7 +35,7 @@ const Footer = () => {
                             <Link className='text-decoration-none fs-5 text-dark' to="/blog">Blog</Link>
                         </CDBBox>
                     </CDBBox>
-                    <CDBBox className=" mb-3">
+                    <CDBBox className=" mb-3 d-none d-lg-block">
                         <p className="h5 mb-3" style={{ fontWeight: '600' }}>
                             Products
                         </p>
@@ -46,7 +46,7 @@ const Footer = () => {
                             <Link className='text-decoration-none fs-5 text-dark' to="/coursesdetail/6">Python</Link>
                         </CDBBox>
                     </CDBBox>
-                    <CDBBox className=" mb-3">
+                    <CDBBox className=" mb-3 d-none d-lg-block">
                         <p className="h5 mb-3" style={{ fontWeight: '600' }}>
                             Help
                         </p>

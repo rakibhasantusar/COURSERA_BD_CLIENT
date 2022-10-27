@@ -85,15 +85,15 @@ const Login = () => {
                     </div>
                 </div>
             </section>
-            <Form className='m-auto w-50' onSubmit={handleSignIn}>
+            <Form className='w-75 p-5 m-auto border border-1 shadow-sm' style={{ backgroundColor: '#f8f9fa' }} onSubmit={handleSignIn} >
                 <Form.Group className="mb-3" controlId="formBasicEmail">
-                    <Form.Label>Email address</Form.Label>
+                    <Form.Label className='fw-bold' >Email address</Form.Label>
                     <Form.Control name='email' type="email" placeholder="Enter email" />
 
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="formBasicPassword">
-                    <Form.Label>Password</Form.Label>
-                    <Form.Control name='password' type="password" placeholder="Password" />
+                    <Form.Label className='fw-bold'>Password</Form.Label>
+                    <Form.Control name='password' type="password" placeholder="Enter Password" />
                 </Form.Group>
                 <Button variant="primary" type="submit">
                     Login
@@ -101,11 +101,10 @@ const Login = () => {
                 <Form.Text className="text-danger">
                     {error}
                 </Form.Text>
+                <div className='container m-auto w-100 mt-3 text-decoration-none'>
+                    <p className='fw-bold'>New Here ? Create a New Account. <Link className='text-decoration-none' to='/register'> Register Here</Link>   </p>
+                </div>
             </Form>
-            <div className='container m-auto w-50 mt-3 text-decoration-none'>
-                <p className='fw-bold'>New Here ? Create a New Account. <Link className='text-decoration-none' to='/register'> Register Here</Link>   </p>
-
-            </div>
             <div className='mx-auto w-50 mt-5'>
                 <ButtonGroup vertical className='mx-auto w-100'>
                     <Button onClick={handleGoogleSignIn} className='mb-2' variant="primary"><FaGoogle /> Login with Google</Button>

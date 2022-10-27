@@ -18,8 +18,8 @@ const CheckOut = () => {
                 <img src={image} className="d-block w-75 mx-auto img-fluid mt-5 " alt="..." style={{ maxHeight: '32rem', }} />
             </div>
             <div className='container mt-5 border rounded shadow p-3 '>
-                <h2>Dear <span className='text-success'>{user?.displayName}</span></h2>
-                <h2>By this : <span className='text-primary'>{
+                <h2 className='mb-2' >Dear <span className='text-success'>{user?.displayName}</span></h2>
+                <h2 className='mb-2'>By this : <span className='text-primary'>{
                     user?.email ?
                         <>
                             <>{user?.email}</>
@@ -30,7 +30,7 @@ const CheckOut = () => {
                         </>
 
                 }</span>Id</h2>
-                <h2>Lets start: <span className='text-danger'>{title} </span>and stay connected</h2>
+                <h2 className='mb-2'>Lets start: <span className='text-danger'>{title} </span>and stay connected</h2>
             </div>
         </div >
     );

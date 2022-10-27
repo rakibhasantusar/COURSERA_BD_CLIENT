@@ -55,29 +55,30 @@ const Register = () => {
                     </div>
                 </div>
             </section>
-            <Form className='w-50 m-auto' onSubmit={handleSubmit}>
+            <Form className='w-75 p-5 m-auto border border-1 shadow-sm' style={{ backgroundColor: '#f8f9fa' }} onSubmit={handleSubmit}>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
-                    <Form.Label>Your Full Name</Form.Label>
+                    <Form.Label className="fw-bold">Your Full Name</Form.Label>
                     <Form.Control name='name' type="text" placeholder="Enter your name" />
 
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
-                    <Form.Label> Your Photo Url</Form.Label>
+                    <Form.Label className="fw-bold"> Your Photo Url</Form.Label>
                     <Form.Control type="text" name='photourl' placeholder="Your Photo Url" />
 
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
-                    <Form.Label>Email address</Form.Label>
+                    <Form.Label className="fw-bold">Email address</Form.Label>
                     <Form.Control name='email' type="email" placeholder="Enter email" required />
 
                 </Form.Group>
 
                 <Form.Group className="mb-3" controlId="formBasicPassword">
-                    <Form.Label>Password</Form.Label>
-                    <Form.Control name='password' type="password" placeholder="Password" required />
+                    <Form.Label className="fw-bold">Password</Form.Label>
+                    <Form.Control name='password' type="password" placeholder="Enter Password" required />
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="formBasicCheckbox">
                     <Form.Check
+
                         type="checkbox"
                         onClick={handleAccepted}
                         label={<>Accept <Link className='text-decoration-none'>Agree & Continue</Link> </>}
@@ -90,7 +91,8 @@ const Register = () => {
                 <Form.Text className="text-danger">
                     <p>{error}</p>
                 </Form.Text>
-                <div className='container m-auto w-50 mt-3 text-decoration-none'>
+
+                <div className='container m-auto w-100 mt-3 text-decoration-none'>
                     <p className='fw-bold'> Already have an Account? <Link className='text-decoration-none' to='/login'> Login Here</Link></p>
                 </div>
             </Form>
