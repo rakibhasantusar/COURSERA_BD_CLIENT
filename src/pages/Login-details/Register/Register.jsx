@@ -3,6 +3,7 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../../Context/AuthProvider';
+import toast from 'react-hot-toast';
 
 
 
@@ -22,6 +23,7 @@ const Register = () => {
             .then(res => {
                 const user = res.user
                 console.log(user)
+                toast.success('your registration done')
                 setError('')
                 form.reset()
                 handleUpdateUserProfile(name, photourl)

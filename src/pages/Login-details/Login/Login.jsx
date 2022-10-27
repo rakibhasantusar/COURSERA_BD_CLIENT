@@ -62,7 +62,7 @@ const Login = () => {
                 const user = res.user;
                 form.reset()
                 setError('')
-                if (user.emailVerified) {
+                if (user.uid) {
                     navigate(from, { replace: true })
                 } else {
                     toast.error('your email is not verifyEmail')
@@ -70,7 +70,9 @@ const Login = () => {
             })
             .catch(err => {
                 console.error(err)
+                //dual error message showed
                 setError(err.message)
+                toast.error(err.message)
             })
             .finally(() => {
                 setLoading(false)
@@ -99,7 +101,7 @@ const Login = () => {
                     Login
                 </Button>
                 <Form.Text className="text-danger">
-                    {error}
+                    <span className='ms-2 fw-semibold'>{error}</span>
                 </Form.Text>
                 <div className='container m-auto w-100 mt-3 text-decoration-none'>
                     <p className='fw-bold'>New Here ? Create a New Account. <Link className='text-decoration-none' to='/register'> Register Here</Link>   </p>
