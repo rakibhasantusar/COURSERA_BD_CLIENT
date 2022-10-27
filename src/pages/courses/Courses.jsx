@@ -13,7 +13,7 @@ const Courses = () => {
                 <Row>
                     <Col lg='2' className='d-none d-lg-block'>
                         <div className='d-flex justify-content-around bg-dark p-3 pt-4 mt-2'>
-                            <h4 className='text-white'>Course <span className='text-danger'>{courses.length}</span> list</h4>
+                            <h4 className='text-white'>Course <span className='text-info'>{courses.length}</span> list</h4>
                         </div>
                         <div className='bg-dark vh-100 '>
                             {
@@ -23,7 +23,7 @@ const Courses = () => {
                     </Col>
                     <Col lg='10'>
                         <div className='d-flex justify-content-around bg-dark p-3 mt-2'>
-                            <h2 className='text-white'>Total <span className='text-danger'>{courses.length}</span> Courses Here</h2>
+                            <h2 className='text-white'>Total <span className='text-info'>{courses.length}</span> Courses Here</h2>
                         </div>
                         <div className="d-flex justify-content-around flex-wrap mt-3">
                             {

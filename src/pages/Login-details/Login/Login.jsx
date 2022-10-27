@@ -1,7 +1,7 @@
 import React, { useContext, useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate, Link } from 'react-router-dom';
 import toast from 'react-hot-toast';
 import { AuthContext } from '../../../Context/AuthProvider';
 import { GithubAuthProvider, GoogleAuthProvider } from 'firebase/auth';
@@ -78,6 +78,13 @@ const Login = () => {
     }
     return (
         <div className='container'>
+            <section className="mb-5">
+                <div className="card text-center py-5 bg-dark">
+                    <div className="card-body ">
+                        <h1 className="card-title text-info fs-1"> Welcome to Login page</h1>
+                    </div>
+                </div>
+            </section>
             <Form className='m-auto w-50' onSubmit={handleSignIn}>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Label>Email address</Form.Label>
@@ -95,6 +102,10 @@ const Login = () => {
                     {error}
                 </Form.Text>
             </Form>
+            <div className='container m-auto w-50 mt-3 text-decoration-none'>
+                <p>New Here ? Create a New Account. <Link className='text-decoration-none' to='/register'> Register Here</Link>   </p>
+
+            </div>
             <div className='mx-auto w-50 mt-5'>
                 <ButtonGroup vertical className='mx-auto w-100'>
                     <Button onClick={handleGoogleSignIn} className='mb-2' variant="primary"><FaGoogle /> Login with Google</Button>

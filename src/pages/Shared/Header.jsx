@@ -2,7 +2,7 @@ import { React, useContext, } from 'react';
 import { Image } from 'react-bootstrap';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import { FaUser } from 'react-icons/fa';
+import { FaBloggerB, FaBook, FaCode, FaGraduationCap, FaQuestion, FaUser } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import Button from 'react-bootstrap/Button';
 import { AuthContext } from '../../Context/AuthProvider';
@@ -26,8 +26,8 @@ const Header = () => {
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="me-3 ms-auto" >
-                        <Link className='text-decoration-none me-3 fw-semibold' style={{ color: '#666' }} to='/courses'> Courses </Link>
-                        <Link className='text-decoration-none me-3 fw-semibold' style={{ color: '#666' }} to='/faq'>Faq</Link>
+                        <Link className='text-decoration-none me-3 fw-semibold' style={{ color: '#666' }} to='/courses'><FaGraduationCap className='fs-3' /> Courses </Link>
+                        <Link className='text-decoration-none me-3 fw-semibold' style={{ color: '#666' }} to='/faq'> Faq</Link>
                         <Link className='text-decoration-none me-3 fw-semibold' style={{ color: '#666' }} to='/blog'>Blog</Link>
                     </Nav>
                     <Nav className="">

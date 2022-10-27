@@ -3,17 +3,22 @@ import { Button, Container } from 'react-bootstrap';
 import { FaStar } from 'react-icons/fa';
 import { Link, useLoaderData } from 'react-router-dom';
 import List from './List';
+import Pdf from "react-to-pdf";
+
+const ref = React.createRef();
 
 const CourseDetail = () => {
     const coursesDetail = useLoaderData()
     const { id, description, title, details, price, rating, image, list } = coursesDetail
     console.log(coursesDetail,)
     return (
-        <div>
+        <div ref={ref}>
             <section className='container border border-1 shadow-sm mt-5 '>
                 <div className='d-flex justify-content-around bg-dark p-3'>
                     <h2 className='text-white'>Welcome to <span className='text-danger'>{title}</span> details page</h2>
-                    <Button variant="primary">Download Course Summary</Button>
+                    <Pdf targetRef={ref} filename="code-example.pdf">
+                        {({ toPdf }) => <Button variant="primary" onClick={toPdf}>Download PDF</Button>}
+                    </Pdf>
                 </div>
                 <div id="carouselExampleSlidesOnly" className="carousel slide " >
                     <div className="carousel-inner" >
