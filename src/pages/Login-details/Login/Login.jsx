@@ -40,11 +40,11 @@ const Login = () => {
             .then(result => {
                 const user = result.user;
                 console.log(user);
-                // if (user.uid) {
-                //     navigate(from, { replace: true })
-                // } else {
-                //     toast.error('your id is not verified ')
-                // }
+                if (user.uid) {
+                    navigate(from, { replace: true })
+                } else {
+                    toast.error('your id is not verified ')
+                }
             })
             .catch(err => console.error(err))
     }
@@ -103,7 +103,7 @@ const Login = () => {
                 </Form.Text>
             </Form>
             <div className='container m-auto w-50 mt-3 text-decoration-none'>
-                <p>New Here ? Create a New Account. <Link className='text-decoration-none' to='/register'> Register Here</Link>   </p>
+                <p className='fw-bold'>New Here ? Create a New Account. <Link className='text-decoration-none' to='/register'> Register Here</Link>   </p>
 
             </div>
             <div className='mx-auto w-50 mt-5'>

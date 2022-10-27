@@ -8,7 +8,7 @@ const Main = () => {
     return (
         <div>
             <Header></Header>
-            <Container fluid className='min-vh-100' >
+            <Container fluid className='' >
                 <Outlet></Outlet>
             </Container>
             <Footer></Footer>

@@ -12,10 +12,10 @@ const CourseDetail = () => {
     const { id, description, title, details, price, rating, image, list } = coursesDetail
     console.log(coursesDetail,)
     return (
-        <div ref={ref}>
+        <div className='container' ref={ref}>
             <section className='container border border-1 shadow-sm mt-5 '>
                 <div className='d-flex justify-content-around bg-dark p-3'>
-                    <h2 className='text-white'>Welcome to <span className='text-danger'>{title}</span> details page</h2>
+                    <h2 className='text-white'>Welcome to <span className='text-info'>{title}</span> details page</h2>
                     <Pdf targetRef={ref} filename="code-example.pdf">
                         {({ toPdf }) => <Button variant="primary" onClick={toPdf}>Download PDF</Button>}
                     </Pdf>

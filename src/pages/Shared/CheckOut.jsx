@@ -19,10 +19,20 @@ const CheckOut = () => {
             </div>
             <div className='container mt-5 border rounded shadow p-3 '>
                 <h2>Dear <span className='text-success'>{user?.displayName}</span></h2>
-                <h2>By this email: <span className='text-primary'>{user?.email}</span></h2>
-                <h2>Lets start: <span className='text-danger'>{title} </span>and stay connect</h2>
+                <h2>By this : <span className='text-primary'>{
+                    user?.email ?
+                        <>
+                            <>{user?.email}</>
+                        </>
+                        :
+                        <>
+                            <>GitHub provide no mail </>
+                        </>
+
+                }</span>Id</h2>
+                <h2>Lets start: <span className='text-danger'>{title} </span>and stay connected</h2>
             </div>
-        </div>
+        </div >
     );
 };
 

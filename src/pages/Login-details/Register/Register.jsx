@@ -2,7 +2,6 @@ import React, { useContext, useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { Link } from 'react-router-dom';
-import toast from 'react-hot-toast';
 import { AuthContext } from '../../../Context/AuthProvider';
 
 
@@ -10,7 +9,7 @@ import { AuthContext } from '../../../Context/AuthProvider';
 const Register = () => {
     const [error, setError] = useState('')
     const [accepted, setAccepted] = useState(false)
-    const { createUser, upDateUserProfile, verifyEmail } = useContext(AuthContext)
+    const { createUser, upDateUserProfile, } = useContext(AuthContext)
 
     const handleSubmit = e => {
         e.preventDefault();
@@ -26,8 +25,6 @@ const Register = () => {
                 setError('')
                 form.reset()
                 handleUpdateUserProfile(name, photourl)
-                // handleEmailVerification();
-                // toast.success('verifyEmail send')
             })
             .catch(err => {
                 console.log(err)
@@ -48,14 +45,6 @@ const Register = () => {
     const handleAccepted = e => {
         setAccepted(e.target.checked)
     }
-
-    // const handleEmailVerification = () => {
-    //     verifyEmail()
-    //         .then(() => { })
-    //         .catch(err => {
-    //             console.log(err)
-    //         })
-    // }
 
     return (
         <div className='container'>
@@ -91,7 +80,7 @@ const Register = () => {
                     <Form.Check
                         type="checkbox"
                         onClick={handleAccepted}
-                        label={<>Accept <Link to="/terms">Terms and condition</Link> </>}
+                        label={<>Accept <Link className='text-decoration-none'>Agree & Continue</Link> </>}
 
                     />
                 </Form.Group>
@@ -102,7 +91,7 @@ const Register = () => {
                     <p>{error}</p>
                 </Form.Text>
                 <div className='container m-auto w-50 mt-3 text-decoration-none'>
-                    <p>Already have an Account? <Link className='text-decoration-none' to='/login'> Login Here</Link></p>
+                    <p className='fw-bold'> Already have an Account? <Link className='text-decoration-none' to='/login'> Login Here</Link></p>
                 </div>
             </Form>
         </div>

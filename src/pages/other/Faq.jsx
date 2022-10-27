@@ -12,54 +12,37 @@ const Faq = () => {
                         </div>
                     </div>
                 </section>
+                <section className="mb-5">
+                    <div className="card text-center py-2 ">
+                        <div className="card-body ">
+                            <h1 className="card-title text-dark fs-4">Common Interview Questions for Programmers</h1>
+                        </div>
+                    </div>
+                </section>
                 <section>
                     <Accordion defaultActiveKey="0">
                         <Accordion.Item eventKey="0">
-                            <Accordion.Header>Q1.Difference between var let const in javascript ?</Accordion.Header>
+                            <Accordion.Header>1. What programming languages can you work with? Describe your experience with them.</Accordion.Header>
                             <Accordion.Body>
-                                Variables declared with var and const are scoped to the immediate function body.
-                                Variables declared with the var keyword are hoisted. Hoisting means that the variable can be
-                                accessed in their enclosing scope even before they are declared.
-                                Variables declared with the let keyword are block-scoped, which means the variables will
-                                have scope to the immediate enclosing block.
-                                The const keyword follows the same rules as the let keyword. The only difference with const
-                                is that const is used to define only constant values in JavaScript programs.
+                                This question emphasizes technical skills without making interviewees demonstrate what they can do outright. So instead of writing a line of code in Python, an interviewee can describe an example of a simple game he or she made using a programming language. This shows that the programmer has a sense of the bigger picture of programming.
                             </Accordion.Body>
                         </Accordion.Item>
                         <Accordion.Item eventKey="1">
-                            <Accordion.Header>Accordion Item #2</Accordion.Header>
+                            <Accordion.Header>2. What do you do first when creating something new?</Accordion.Header>
                             <Accordion.Body>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-                                minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                                aliquip ex ea commodo consequat. Duis aute irure dolor in
-                                reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                                pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                                culpa qui officia deserunt mollit anim id est laborum.
+                                Being able to assess, prioritize and plan out a project affects a programmer’s success drastically. The ability to see a whole project from start to finish and to visualize what the in-between stages look like requires a deep understanding of programming. Visualization and practice are essential to success.
                             </Accordion.Body>
                         </Accordion.Item>
                         <Accordion.Item eventKey="2">
-                            <Accordion.Header>Accordion Item #2</Accordion.Header>
+                            <Accordion.Header>3. How do you keep up with current trends and advances in this field?</Accordion.Header>
                             <Accordion.Body>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-                                minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                                aliquip ex ea commodo consequat. Duis aute irure dolor in
-                                reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                                pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                                culpa qui officia deserunt mollit anim id est laborum.
+                                Because of the rapid evolution of technology, a programmer must also be an eternal student. Participating in continuing education, keeping current on certifications and networking with other programmers who work in similar fields can be very helpful. Employers also look for potential employees who are open to debate, discussion and critique.
                             </Accordion.Body>
                         </Accordion.Item>
                         <Accordion.Item eventKey="3">
-                            <Accordion.Header>Accordion Item #2</Accordion.Header>
+                            <Accordion.Header>5. What is the ideal work environment?</Accordion.Header>
                             <Accordion.Body>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-                                minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                                aliquip ex ea commodo consequat. Duis aute irure dolor in
-                                reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                                pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                                culpa qui officia deserunt mollit anim id est laborum.
+                                This is one of the more traditional questions for any job in any field. However, it is worth mentioning here because a programmer works best in an environment that is conducive to his or her style of work. If the prospective employee prefers to work alone in the dark, then a company with an open office layout is probably not going to be a good fit.
                             </Accordion.Body>
                         </Accordion.Item>
                     </Accordion>
