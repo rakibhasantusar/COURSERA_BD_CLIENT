@@ -23,7 +23,7 @@ const Register = () => {
             .then(res => {
                 const user = res.user
                 console.log(user)
-                toast.success('your registration done')
+                toast.success('your registration with login done')
                 setError('')
                 form.reset()
                 handleUpdateUserProfile(name, photourl)
