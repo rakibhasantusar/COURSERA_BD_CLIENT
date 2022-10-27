@@ -10,15 +10,15 @@ Hosted in Firebase -> [coursera-bd_website_link](https://coursera-bd.web.app/)
 
 🤍 This website made with JavaScript library React v-18.2.0 & CSS React Bootstrap FrameWork
 
-• In this project firstly I use React Router v-(6.4.2) which is make our website faster
+- In this project firstly I use React Router v-(6.4.2) which is make our website faster
 
-- I use Firebase as my website deployer
+* I use Firebase as my website deployer
 
-3.  Also i use React icon, SVG image etc
-4.  I use Component from many website
-5.  This website is fully responsive
-6.  In this website I made my own server and API
-7.  This website is helpfull for web developer
+* Also i use React icon, SVG image etc
+* I use Component from many website
+* This website is fully responsive
+* In this website I made my own server and API
+* This website is helpfull for web developer
 
 ■ Of course, we want to know whether people learned something, and most of you will want to track and report that people learned something. So at the end of the e-learning course, you can present a standard quiz using multiple choice and true/false questions. At this point, grading the quiz is appropriate and learners should be told that the final quiz will be graded.
 
