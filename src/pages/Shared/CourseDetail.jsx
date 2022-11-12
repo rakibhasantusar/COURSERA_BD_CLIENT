@@ -14,7 +14,7 @@ const CourseDetail = () => {
     return (
         <div className='container' ref={ref}>
             <section className='container border border-1 shadow-sm mt-5 '>
-                <div className='d-flex justify-content-around bg-dark p-3'>
+                <div className='d-flex justify-content-around flex-wrap bg-dark p-3'>
                     <h2 className='text-white '>Welcome to <span className='text-info'>{title}</span> details page</h2>
                     <Pdf targetRef={ref} filename="cooursera-BD-outline.pdf">
                         {({ toPdf }) => <Button variant="primary" onClick={toPdf}>Download PDF</Button>}
@@ -41,17 +41,17 @@ const CourseDetail = () => {
                         }
                     </div>
                     <div className='bg-dark mt-5'>
-                        <div className='d-flex justify-content-between w-50 mx-auto bg-dark p-1'>
-                            <h3 className='fw-semibold text-white'> Price: {price}$</h3>
-                            <h3 style={{ color: 'goldenrod' }} className='me-4 d-flex align-items-center ms-3' > Ratinng: {rating.rate}<FaStar /></h3>
+                        <div className='d-flex justify-content-between flex-wrap w w-50 mx-auto bg-dark p-1'>
+                            <h3 className='fw-semibold text-white '> Price: {price}$</h3>
+                            <h3 style={{ color: 'goldenrod' }} className='me-4 d-flex align-items-center ms-3' > <span>Ratinng: {rating.rate}<FaStar /></span></h3>
                         </div>
                     </div>
                 </div>
             </section>
             <section className=' container '>
-                <div className=' w-50 m-auto '>
+                <div className=' w-100 m-auto '>
                     <Link className=' w-100 d-flex  justify-content-center' to={`/checkout/${id}`}>
-                        <Button variant="primary" className=' mx-auto mt-5 fs-2'>Get Premium access</Button>
+                        <Button variant="primary" className=' mx-auto mt-5 fs-2'><span className=''>Get Premium access</span> </Button>
                     </Link>
                 </div>
             </section>

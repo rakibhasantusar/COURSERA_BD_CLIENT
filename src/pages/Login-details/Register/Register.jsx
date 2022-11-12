@@ -10,7 +10,7 @@ import toast from 'react-hot-toast';
 const Register = () => {
     const [error, setError] = useState('')
     const [accepted, setAccepted] = useState(false)
-    const { createUser, upDateUserProfile, } = useContext(AuthContext)
+    const { createUser, upDateUserProfile, verifyEmail } = useContext(AuthContext)
 
     const handleSubmit = e => {
         e.preventDefault();
@@ -27,6 +27,8 @@ const Register = () => {
                 setError('')
                 form.reset()
                 handleUpdateUserProfile(name, photourl)
+                handleEmailVerification();
+                toast.success('verifyEmail send')
             })
             .catch(err => {
                 console.log(err)
@@ -46,6 +48,14 @@ const Register = () => {
 
     const handleAccepted = e => {
         setAccepted(e.target.checked)
+    }
+
+    const handleEmailVerification = () => {
+        verifyEmail()
+            .then(() => { })
+            .catch(err => {
+                console.log(err)
+            })
     }
 
     return (
