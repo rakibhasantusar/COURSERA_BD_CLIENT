@@ -5,7 +5,7 @@ import logo from "../../asset/Coursera-BD.png";
 
 const Footer = () => {
     return (
-        <CDBFooter className="shadow mt-5">
+        <CDBFooter className="shadow mt-5 border border-secondary" >
             <CDBBox display="flex" flex="column" className="mx-auto py-5" style={{ width: '90%' }}>
                 <CDBBox display="flex" justifyContent="around" className="flex-wrap">
                     <CDBBox alignSelf="center" className=" mb-3">

@@ -12,10 +12,10 @@ const Courses = () => {
             <Container>
                 <Row>
                     <Col lg='2' className='d-none d-lg-block'>
-                        <div className='d-flex justify-content-around bg-dark p-3 pt-4 mt-2'>
-                            <h4 className='text-white'>Course <span className='text-info'>{courses.length}</span> list</h4>
+                        <div className='d-flex justify-content-around bg-secondary p-3 pt-4 mt-2'>
+                            <h4 className='text-white'>Course <span className='text-white'>{courses.length}</span> list</h4>
                         </div>
-                        <div className='bg-dark vh-100 '>
+                        <div className='bg-secondary pb-4  '>
                             {
                                 courses.map(course => (<LeftSideNav key={course.id} course={course}></LeftSideNav>))
                             }

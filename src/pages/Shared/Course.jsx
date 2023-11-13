@@ -22,7 +22,7 @@ const Course = ({ course }) => {
                         </div>
                     </Card.Text>
                     <Link to={`/coursesdetail/${id}`}>
-                        <Button variant="primary" className='position-absolute bottom-0 mb-4'>Course detail</Button>
+                        <Button variant="dark" className='position-absolute bottom-0 mb-4'>Course detail</Button>
                     </Link>
                 </Card.Body>
             </Card>

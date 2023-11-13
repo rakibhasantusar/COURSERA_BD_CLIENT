@@ -35,8 +35,8 @@ const Header = () => {
                             {
                                 user?.uid ?
                                     <>
-                                        <span className='me-2 text-primary fw-semibold d-flex align-items-center'>{user?.displayName}</span>
-                                        <Button variant='dark' style={{ color: '#fff' }} onClick={handleLogOut}>logout</Button>
+                                        <span className='me-2 text-dark fw-semibold d-flex align-items-center'>{user?.displayName}</span>
+                                        <Button variant='outline-dark'  onClick={handleLogOut}>logout</Button>
                                     </>
                                     :
                                     <>
@@ -64,9 +64,9 @@ const Header = () => {
                         </Link>
 
                     </Nav>
-                    <span className='ms-4 d-lg-flex align-items-center border  border-dark rounded'>
+                    {/* <span className='ms-4 d-lg-flex align-items-center border  border-dark rounded'>
                         <BootstrapSwitchButton checked={true} width={70} onstyle="dark" onlabel='Dark' offlabel='Light' />
-                    </span>
+                    </span> */}
                 </Navbar.Collapse>
             </div>
         </Navbar >
