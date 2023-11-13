@@ -59,7 +59,7 @@ const Register = () => {
     }
 
     return (
-        <div className='container'>
+        <div className='container my-5'>
             <section className="mb-5">
                 <div className="card text-center py-5 bg-dark">
                     <div className="card-body ">

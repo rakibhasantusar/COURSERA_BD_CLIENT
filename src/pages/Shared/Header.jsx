@@ -22,7 +22,7 @@ const Header = () => {
     return (
         <Navbar collapseOnSelect className='shadow-sm' expand="lg" bg="light" variant="light">
             <div className='container d-flex justify-content-between'>
-                <Navbar.Brand> <Link className='text-decoration-none  fs-4  border-2 border-bottom border-primary' to='/'> <Image className='mb-2' src={img} style={{ height: '30px', width: '30px' }}></Image>  COURSERA-BD</Link> </Navbar.Brand>
+                <Navbar.Brand> <Link className='text-decoration-none  fs-4' to='/'> <Image className='mb-2' src={img} style={{ height: '30px', width: '30px' }}></Image> OURSERA-BD</Link> </Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="me-3 ms-auto" >
@@ -53,9 +53,9 @@ const Header = () => {
                                     title={user?.displayName}
                                     roundedCircle
                                     src={user?.photoURL}
-                                    style={{ height: '40px', width: '40px' }}
+                                    style={{ height: '40px', width: '40px',marginLeft:"10px" }}
                                 ></Image>
-                                : <FaUser style={{ color: '#666' }}
+                                : <FaUser style={{ color: '#666' , marginLeft:"10px" }}
                                     data-bs-toggle="tooltip"
                                     data-bs-placement="bottom"
                                     title="no information"

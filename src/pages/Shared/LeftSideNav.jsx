@@ -6,7 +6,7 @@ const LeftSideNav = ({ course }) => {
     return (
         <div >
             <Link className='text-decoration-none  ' to={`/coursesdetail/${id}`}>
-                <p className='mx-2 fs-5 text-white' style={{ paddingLeft: 6 }}><span>{title}</span></p>
+                <p className='mx-2 fs-6 text-white' style={{ paddingLeft: 6 }}><span>{title}</span></p>
             </Link>
         </div>
     );

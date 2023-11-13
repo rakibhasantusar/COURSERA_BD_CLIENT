@@ -9,7 +9,7 @@ import { FaArrowRight } from 'react-icons/fa';
 
 const Home = () => {
     return (
-        <div>
+        <div style={{ marginBottom:"100px" }}>
             <section className='h-50' >
                 <Carousel className='carousel-control-next-icon-none' >
                     <Carousel.Item style={{ maxHeight: 800 }}>
@@ -94,7 +94,7 @@ const Home = () => {
                 </Accordion>
             </section>
 
-            <section className="mb-5 container ">
+            <section className="mb-5 container " >
                 <div className="card text-center py-2 shadow-sm ">
                     <div className="card-body">
                         <Link to='/courses' className='text-decoration-none'>

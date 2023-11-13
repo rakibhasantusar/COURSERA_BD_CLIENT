@@ -79,7 +79,7 @@ const Login = () => {
             })
     }
     return (
-        <div className='container'>
+        <div className='container my-5'>
             <section className="mb-5">
                 <div className="card text-center py-5 bg-dark">
                     <div className="card-body ">
@@ -87,7 +87,7 @@ const Login = () => {
                     </div>
                 </div>
             </section>
-            <Form className='w-75 p-5 m-auto border border-1 shadow-sm' style={{ backgroundColor: '#f8f9fa' }} onSubmit={handleSignIn} >
+            <Form className='w-75 p-5 m-auto border border-1 shadow-sm ' style={{ backgroundColor: '#f8f9fa' }} onSubmit={handleSignIn} >
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Label className='fw-bold' >Email address</Form.Label>
                     <Form.Control name='email' type="email" placeholder="Enter email" />

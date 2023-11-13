@@ -9,13 +9,13 @@ const Courses = () => {
     console.log(courses)
     return (
         <div>
-            <Container>
+            <Container className='mt-5'>
                 <Row>
                     <Col lg='2' className='d-none d-lg-block'>
-                        <div className='d-flex justify-content-around bg-secondary p-3 pt-4 mt-2'>
-                            <h4 className='text-white'>Course <span className='text-white'>{courses.length}</span> list</h4>
+                        <div className='d-flex justify-content-around bg-secondary p-3 pt-4 mt-2 border-2 border-bottom border-light'>
+                            <h4 className='text-white '>Course <span className='text-white'>{courses.length}</span> list</h4>
                         </div>
-                        <div className='bg-secondary pb-4  '>
+                        <div className='bg-secondary pb-4 pt-3  '>
                             {
                                 courses.map(course => (<LeftSideNav key={course.id} course={course}></LeftSideNav>))
                             }
